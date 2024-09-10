@@ -21,8 +21,8 @@ Flat-field correction is the process to retrieve noise-free object from the meas
 Clone this repo:
 
 ```
-git clone https://github.com/yuhez/FlatFieldCorrection.git
-cd FlatFieldCorrection
+git clone https://github.com/yuhez/FFCGAN.git
+cd FFCGAN
 ```
 To install the required python packages:
 
@@ -31,11 +31,11 @@ conda env create -f ffc.yml
 ```
 
 ### FFCGAN training
-For the training, our provided several data loaders in [dataset](https://github.com/yuhez/FlatFieldCorrection/blob/master/dataset/) support loading data with HDF5 format. Please check the details there.
+For the training, our provided several data loaders in [dataset](https://github.com/yuhez/FFCGAN/blob/master/dataset/) support loading data with HDF5 format. Please check the details there.
 
 For the training with other data formats, you may want to create a customized data loader. 
 
-Modify training parameters in [FFC_exp.yaml](https://github.com/yuhez/FlatFieldCorrection/blob/master/configs/FFC_exp.yaml) and [default.yaml](https://github.com/yuhez/FlatFieldCorrection/blob/master/configs/default.yaml).
+Modify training parameters in [FFC_exp.yaml](https://github.com/yuhez/FFCGAN/blob/master/configs/FFC_exp.yaml) and [default.yaml](https://github.com/yuhez/FFCGAN/blob/master/configs/default.yaml).
 
 To run the training:
 
@@ -47,7 +47,7 @@ For more training options, please check out:
 
 ### Results
 
-Online visualization at the server and port specified in [FFC_exp.yaml](https://github.com/yuhez/FlatFieldCorrection/blob/master/configs/FFC_exp.yaml). 
+Online visualization at the server and port specified in [FFC_exp.yaml](https://github.com/yuhez/FFCGAN/blob/master/configs/FFC_exp.yaml). 
 The training results will be saved in: `./Results`.
 The training parameters and losses will be saved to a txt file here: `./logs/`.
 
