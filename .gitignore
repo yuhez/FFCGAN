@@ -1,0 +1,8 @@
+logs/
+results/
+test/
+scripts/
+save/
+**/__pycache__/
+.spyderworkspace
+.ipynb_checkpoints

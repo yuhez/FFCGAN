@@ -1,0 +1,16 @@
+data:
+  proposal_number: 3100
+  train_run_list: [75]
+  test_run_list: [94]
+  camera_idx: 2 # camera 1 or camera 2
+  ffc_path: '/gpfs/exfel/exp/SPB/202202/p003100/scratch/ffc'
+  h5_gt_pattern: 'camera_dffc'
+  pad_size: [256, 512]
+
+evaluation:
+  dir: /gpfs/exfel/exp/SPB/202202/p003100/scratch/ffc/ffc-dl # write path
+  expname: 20220916_run_99_camera_2_ffc
+  batch_size: 127
+  load_epochs: 300
+  write_h5_pattern: DL
+  load_dir: /gpfs/exfel/exp/SPB/202202/p003100/scratch/zyhklmy/machine-learning/FFC/Results

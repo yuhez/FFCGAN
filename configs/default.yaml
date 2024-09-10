@@ -1,0 +1,40 @@
+expname: default
+data:
+#   path: 'PATH_TO_DATA'
+#   train: ['TRAIN_DATA.h5']
+#   test: ['TEST_DATA.h5']
+  pad_size: [256, 512]
+  img_size: [250, 400] # only used for recover image dim in evaluation
+#   h5_pattern: ['raw', 'normalised'] # data, ground truth
+  Shimadzu_num: 128 # number of frames in a sequence
+
+training:
+  dir: ./results
+  lr_g: 0.0002
+  lr_d: 0.0001
+  lr_decay_factor: 0.1
+  lr_decay_epochs: 100
+  num_epochs: 500
+  batch_size: 100
+  beta1: 0.5
+  lambda_mse: 5000
+  lambda_G: 1
+  lambda_fsc: 0
+  clip_max: 1.0
+  print_loss_freq_iter: 20
+  save_plot_freq_epoch: 20
+  save_model_freq_epoch: 100
+pretrain: # Set pretrain to True in the main file #TODO
+  use_pretrain: No
+  load_epoch: 100
+  load_run: test
+evaluation:
+  model_path: default
+visualization:
+  display_id: 1 # if 0, no display
+  display_ncols: 4 # if positive, display all images in a single visdom web panel with certain number of images per row
+  display_port: 8097
+  display_server: http://localhost
+  display_winsize: 256 # display window size for both visdom and HTML'
+  display_env: main # visdom display environment name (default is "main")
+

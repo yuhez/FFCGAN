@@ -1,0 +1,43 @@
+expname: run99_camera2_tv # Change name here
+note: test 
+data:
+  proposal_number: 3100
+  train_run_list: [99]
+  test_run_list: [94]
+  camera_idx: 2 # camera 1 or camera 2
+  ffc_path: '/gpfs/exfel/exp/SPB/202202/p003100/scratch/ffc'
+  TV_denoising: Yes
+  h5_gt_pattern: 'TV_denoised_data'  # 'camera_dffc' for ffc, 'TV_denoised_data' for TV denoising
+#   h5_gt_pattern: 'TV_denoised_data'  # 'camera_dffc' for ffc, 'TV_denoised_data' for TV denoising
+  pad_size: [256, 512]
+
+training:
+  dir: Results/
+  lr_g: 0.0002
+  lr_d: 0.0001
+  lr_decay_factor: 0.1
+  lr_decay_epochs: 150
+  num_epochs: 600
+  batch_size: 250
+  lambda_mse: 100
+  lambda_G: 1
+  lambda_fsc: 0
+  print_loss_freq_iter: 20
+  save_plot_freq_epoch: 10
+  save_model_freq_epoch: 20
+  preprocess: standardize # normalize or standardize
+
+visualization:
+  display_id: 1 # if 0, no display
+  display_server: http://127.0.0.1
+
+pretrain: # Set pretrain to True in the main file #TODO
+  use_pretrain: No
+  load_epoch: 500
+  load_run: 20220915_run_75_camera_1
+
+evaluation:
+  dir: /gpfs/exfel/exp/SPB/202202/p003100/scratch/ffc/ffc-dl # write path
+  batch_size: 127
+  save_every_frames: 15
+
