@@ -1,6 +1,8 @@
 # FFCGAN: A deep-learning approach for flat-field correction at EuXFEL
-FFCGAN is a supervised deep-learning approach for real-time flat-field correction at large-scale facilities. It is based on a generative adversarial neural network, and we include [Fourier Ring Correlation loss](https://doi.org/10.1364/OE.423222) to improve the performance.
-For more detailed information about FFCGAN training and performance, please refer to the [paper](https://doi.org/10.1364/OE.451914).
+FFCGAN is a supervised deep-learning approach for real-time flat-field correction at large-scale facilities. 
+For more detailed information about FFCGAN training and performance, please refer to our paper: [Shot-to-shot flat-field correction at X-ray free-electron lasers](https://doi.org/10.1364/OE.451914).
+
+It is based on a generative adversarial neural network, and we include [Fourier Ring Correlation loss](https://doi.org/10.1364/OE.423222) to improve the performance.
 
 <p align="center">
 <img src="images/FFC.jfif"/>
